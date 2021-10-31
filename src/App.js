@@ -6,6 +6,7 @@ import AddService from "./pages/dashboard/addService/AddService";
 import Dashboard from "./pages/dashboard/manageBookings.js/Dashboard";
 import ManageServices from "./pages/dashboard/manageServices/ManageServices";
 import Home from "./pages/home/Home";
+import NotFound from "./pages/notFound/NotFound";
 import MyBookings from "./pages/profile/MyBookings";
 import Profile from "./pages/profile/profile";
 import Services from "./pages/services/Services";
@@ -52,6 +53,9 @@ function App() {
         </Route>
         <Route exact path="/">
           <Home />
+        </Route>
+        <Route path="*">
+          <NotFound />
         </Route>
       </Switch>
     </BookinaProvider>

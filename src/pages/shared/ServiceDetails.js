@@ -5,6 +5,8 @@ import { FaBath } from "react-icons/fa";
 import { AiOutlineWifi } from "react-icons/ai";
 import { RiComputerLine } from "react-icons/ri";
 import { BsBookmarkPlus } from "react-icons/bs";
+import { GoLocation } from "react-icons/go";
+import { BiTimeFive } from "react-icons/bi";
 
 const ServiceDetails = () => {
   const { id } = useParams();
@@ -31,10 +33,18 @@ const ServiceDetails = () => {
             <img src={service?.imageUrl} alt="" />
           </div>
           <div className="my-5">
+            <p className="md:text-xl flex items-center pb-5 font-serif font-capitalized">
+              <GoLocation />
+              {service?.location}
+            </p>
             <h1 className="md:text-4xl font-serif font-capitalized">
               {service?.title}
             </h1>
             <p className="text-gray-500 py-10">{service?.desc}</p>
+            <p className="md:text-xl flex items-center pb-5 font-serif font-capitalized">
+              <BiTimeFive />
+              {service?.duration}
+            </p>
             <p className="flex items-center justify-between text-xl">
               <span>{service?.capacity}</span>
               <span>${service?.cost}</span>

@@ -21,6 +21,7 @@ const ServiceForm = () => {
       duration: data.duration,
       cost: data.cost,
       title: data.title,
+      location: data.location,
       desc: data.desc,
     };
     axios
@@ -78,6 +79,16 @@ const ServiceForm = () => {
             {errors.title?.type === "required" && "Title  is required"}
           </span>
         </div>
+        <div>
+          <input
+            className="focus:outline-none block px-5 py-2 w-full rounded md:w-96 "
+            placeholder="service location"
+            {...register("location", { required: true })}
+          />
+          <span className="text-red-500 pl-1">
+            {errors.location?.type === "required" && "location  is required"}
+          </span>
+        </div>
 
         <div>
           <select
@@ -95,10 +106,10 @@ const ServiceForm = () => {
             {...register("duration", { required: true })}
             className="focus:outline-none mt-5 bg-white block w-full px-5 py-2 rounded md:w-96 "
           >
-            <option value="oneDay">1 day</option>
-            <option value="twoThreeDay">2-3 days</option>
-            <option value="twoSixDay">2-6 days</option>
-            <option value="sixTenDay">6-10 days</option>
+            <option value="1 day">1 day</option>
+            <option value="2-3 days">2-3 days</option>
+            <option value="2-6 days">2-6 days</option>
+            <option value="6-10 days">6-10 days</option>
           </select>
         </div>
         <div className="my-4">
