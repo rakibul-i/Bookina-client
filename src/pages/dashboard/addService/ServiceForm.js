@@ -24,7 +24,7 @@ const ServiceForm = () => {
       desc: data.desc,
     };
     axios
-      .post("http://localhost:5050/services", serviceInfo)
+      .post("https://evil-warlock-97392.herokuapp.com/services", serviceInfo)
       .then(function (response) {
         console.log(response.data.insertedId);
         if (response.data.insertedId) {

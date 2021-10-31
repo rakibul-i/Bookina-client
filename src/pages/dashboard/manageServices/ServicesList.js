@@ -17,7 +17,7 @@ const ServicesList = (props) => {
     }).then((result) => {
       /* Read more about isConfirmed, isDenied below */
       if (result.isConfirmed) {
-        fetch(`http://localhost:5050/services/${id}`, {
+        fetch(`https://evil-warlock-97392.herokuapp.com/services/${id}`, {
           method: "DELETE",
         })
           .then((response) => response.json())

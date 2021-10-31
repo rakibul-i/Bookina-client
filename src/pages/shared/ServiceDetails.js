@@ -13,7 +13,7 @@ const ServiceDetails = () => {
   const history = useHistory();
 
   useEffect(() => {
-    fetch(`http://localhost:5050/services/${id}`)
+    fetch(`https://evil-warlock-97392.herokuapp.com/services/${id}`)
       .then((response) => response.json())
       .then((data) => {
         setService(data);

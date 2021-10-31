@@ -10,7 +10,9 @@ const MyBookings = () => {
   const [userBookings, setUserBookings] = useState([]);
 
   useEffect(() => {
-    fetch(`http://localhost:5050/bookings?email=${currentUser?.email}`)
+    fetch(
+      `https://evil-warlock-97392.herokuapp.com/bookings?email=${currentUser?.email}`
+    )
       .then((response) => response.json())
       .then((data) => {
         setUserBookings(data);
@@ -28,7 +30,7 @@ const MyBookings = () => {
     }).then((result) => {
       /* Read more about isConfirmed, isDenied below */
       if (result.isConfirmed) {
-        fetch(`http://localhost:5050/bookings/${id}`, {
+        fetch(`https://evil-warlock-97392.herokuapp.com/bookings/${id}`, {
           method: "DELETE",
         })
           .then((response) => response.json())

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 
 const useServices = () => {
-  const url = `http://localhost:5050/services`;
+  const url = `https://evil-warlock-97392.herokuapp.com/services`;
   const [services, setServices] = useState([]);
 
   // load products asynchronously

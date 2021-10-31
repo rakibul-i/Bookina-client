@@ -17,7 +17,7 @@ const BookingLists = (props) => {
     }).then((result) => {
       /* Read more about isConfirmed, isDenied below */
       if (result.isConfirmed) {
-        fetch(`http://localhost:5050/bookings/${id}`, {
+        fetch(`https://evil-warlock-97392.herokuapp.com/bookings/${id}`, {
           method: "DELETE",
         })
           .then((response) => response.json())
@@ -38,7 +38,7 @@ const BookingLists = (props) => {
       id: _id,
       status: updateStatus,
     };
-    fetch(`http://localhost:5050/bookings`, {
+    fetch(`https://evil-warlock-97392.herokuapp.com/bookings`, {
       method: "PUT",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(updateInfo),

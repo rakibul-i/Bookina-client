@@ -8,7 +8,7 @@ const Dashboard = () => {
   const [bookings, setBookings] = useState([]);
 
   useEffect(() => {
-    fetch(`http://localhost:5050/allBookings`)
+    fetch(`https://evil-warlock-97392.herokuapp.com/allBookings`)
       .then((response) => response.json())
       .then((data) => {
         setBookings(data);

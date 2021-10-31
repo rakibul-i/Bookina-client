@@ -17,7 +17,7 @@ const BookingForm = () => {
   } = useForm();
 
   useEffect(() => {
-    fetch(`http://localhost:5050/services/${id}`)
+    fetch(`https://evil-warlock-97392.herokuapp.com/services/${id}`)
       .then((response) => response.json())
       .then((data) => {
         setService(data);
@@ -45,7 +45,7 @@ const BookingForm = () => {
     }).then((result) => {
       /* Read more about isConfirmed, isDenied below */
       if (result.isConfirmed) {
-        fetch(`http://localhost:5050/bookings`, {
+        fetch(`https://evil-warlock-97392.herokuapp.com/bookings`, {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify(bookingData),
