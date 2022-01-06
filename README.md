@@ -2,7 +2,7 @@
 
 This project is all about vacation tour booking center.
 
-### ]Live-site] (https://bookina-vacation-tour.web.app/)
+### [Live-site] (https://bookina-vacation-tour.web.app/)
 
 ### Features:
 
