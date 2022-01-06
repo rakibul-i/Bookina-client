@@ -2,6 +2,8 @@
 
 This project is all about vacation tour booking center.
 
+### ]Live-site] (https://bookina-vacation-tour.web.app/)
+
 ### Features:
 
 1. simple responsive navbar, banner, services, license and footer in home page.
